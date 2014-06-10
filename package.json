@@ -1,12 +1,14 @@
 {
   "name": "hubot-53cal-jp",
-  "description": "A hubot script that does the things",
+  "description": "Check the day taking out the trash JP.",
   "version": "0.0.0",
   "author": "sanemat <o.gata.ken@gmail.com>",
   "license": "MIT",
   "keywords": [
     "hubot",
-    "hubot-scripts"
+    "hubot-scripts",
+    "trash",
+    "garbage"
   ],
   "repository": {
     "type": "git",

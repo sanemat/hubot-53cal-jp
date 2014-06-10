@@ -1,5 +1,5 @@
 # Description
-#   Check the day taking out the trash.
+#   Check the day taking out the trash JP.
 #
 # Dependencies:
 #   "53cal-jp-scraper"
