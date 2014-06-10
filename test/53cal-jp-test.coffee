@@ -13,7 +13,4 @@ describe '53cal-jp', ->
     require('../src/53cal-jp')(@robot)
 
   it 'registers a respond listener', ->
-    expect(@robot.respond).to.have.been.calledWith(/hello/)
-
-  it 'registers a hear listener', ->
-    expect(@robot.hear).to.have.been.calledWith(/orly/)
+    expect(@robot.respond).to.have.been.calledWith(/ゴミ 明日/)
