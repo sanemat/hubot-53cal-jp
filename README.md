@@ -1,4 +1,5 @@
 # hubot-53cal-jp
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-url]][daviddm-image] [![Coverage Status][coveralls-image]][coveralls-url]
 
 Check the day taking out the trash JP.
 
@@ -27,3 +28,12 @@ Then add **hubot-53cal-jp** to your `external-scripts.json`:
 user1>> hubot ゴミ 今日
 hubot>> 2014-06-10 Tuesday の[南大井6丁目18番地(大森住宅）以外]は燃やすごみです。
 ```
+
+[npm-url]: https://npmjs.org/package/hubot-53cal-jp
+[npm-image]: https://badge.fury.io/js/hubot-53cal-jp
+[travis-url]: https://travis-ci.org/sanemat/hubot-53cal-jp
+[travis-image]: https://travis-ci.org/sanemat/hubot-53cal-jp.svg?branch=master
+[daviddm-url]: https://david-dm.org/sanemat/hubot-53cal-jp.svg?theme=shields.io
+[daviddm-image]: https://david-dm.org/sanemat/hubot-53cal-jp
+[coveralls-url]: https://coveralls.io/r/sanemat/hubot-53cal-jp
+[coveralls-image]: https://coveralls.io/repos/sanemat/hubot-53cal-jp/badge.png
