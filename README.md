@@ -18,7 +18,7 @@ Then add **hubot-53cal-jp** to your `external-scripts.json`:
 ```
 
 ## Configuration
-  You set environmental variables like below:
+  You set environmental variables(`GOMICAL_JP_CITY`, `GOMICAL_JP_AREA`) like below:
 ```
 heroku config:set GOMICAL_JP_CITY=1130104 GOMICAL_JP_AREA=1130104154
 ```
