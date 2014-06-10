@@ -6,7 +6,7 @@
 #   "moment"
 #
 # Configuration:
-#   53CAL_JP_CITY, 53CAL_JP_AREA
+#   GOMICAL_JP_CITY, GOMICAL_JP_AREA
 #     see: http://www.53cal.jp/area_sv/
 #
 # Commands:
@@ -17,7 +17,10 @@
 #   sanemat
 gomiCalJp = require '53cal-jp-scraper'
 moment = require 'moment'
-scraper = gomiCalJp({ city: '1130104', area: '1130104154' })
+
+city = process.env.GOMICAL_JP_CITY
+area = process.env.GOMICAL_JP_AREA
+scraper = gomiCalJp({ city: city, area: area })
 
 module.exports = (robot) ->
   robot.respond /ゴミ 明日/, (msg) ->
