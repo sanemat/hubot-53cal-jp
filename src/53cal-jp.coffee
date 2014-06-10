@@ -18,6 +18,7 @@ scraper = gomiCalJp({ city: '1130104', area: '1130104154' })
 
 module.exports = (robot) ->
   robot.respond /ゴミ 明日/, (msg) ->
-    day = '2014-06-11'
+    day = '2014-06-10'
     scraper.whatDate day, (err, data) ->
-      msg.reply day + 'の' + data.meta.areaName + 'は' + Object.values(data.result)[0]
+      gomi = if data.result[day] then data.result[day] + 'です。' else 'ゴミの収集がありません。'
+      msg.reply day + 'の' + data.meta.areaName + 'は' + gomi
