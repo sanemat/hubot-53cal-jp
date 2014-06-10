@@ -14,11 +14,13 @@
 # Author:
 #   sanemat[@<org>]
 gomiCalJp = require '53cal-jp-scraper'
+moment = require 'moment'
 scraper = gomiCalJp({ city: '1130104', area: '1130104154' })
 
 module.exports = (robot) ->
   robot.respond /ゴミ 明日/, (msg) ->
-    day = '2014-06-10'
-    scraper.whatDate day, (err, data) ->
-      gomi = if data.result[day] then data.result[day] + 'です。' else 'ゴミの収集がありません。'
-      msg.reply day + 'の' + data.meta.areaName + 'は' + gomi
+    day = moment().add('days', 1)
+    dayString = day.format('YYYY-MM-DD')
+    scraper.whatDate dayString, (err, data) ->
+      gomi = if data.result[dayString] then data.result[dayString] + 'です。' else 'ゴミの収集がありません。'
+      msg.reply day.format('YYYY-MM-DD dddd') + ' ' + 'の[' + data.meta.areaName + ']は' + gomi
