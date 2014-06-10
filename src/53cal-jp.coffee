@@ -18,8 +18,8 @@
 gomiCalJp = require '53cal-jp-scraper'
 moment = require 'moment'
 
-city = process.env.GOMICAL_JP_CITY
-area = process.env.GOMICAL_JP_AREA
+city = process.env.GOMICAL_JP_CITY || '1130104'
+area = process.env.GOMICAL_JP_AREA || '1130104154'
 scraper = gomiCalJp({ city: city, area: area })
 
 module.exports = (robot) ->
