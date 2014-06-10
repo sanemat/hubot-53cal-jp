@@ -17,7 +17,8 @@
   },
   "dependencies": {
     "53cal-jp-scraper": "^0.1.0",
-    "coffee-script": "^1.7.1"
+    "coffee-script": "^1.7.1",
+    "moment": "^2.6.0"
   },
   "devDependencies": {
     "chai": "*",
