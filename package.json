@@ -1,7 +1,7 @@
 {
   "name": "hubot-53cal-jp",
   "description": "Check the day taking out the trash JP.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "sanemat <o.gata.ken@gmail.com>",
   "license": "MIT",
   "keywords": [
