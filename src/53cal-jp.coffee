@@ -1,18 +1,20 @@
 # Description
-#   A hubot script that does the things
+#   Check the day taking out the trash.
+#
+# Dependencies:
+#   "53cal-jp-scraper"
+#   "moment"
 #
 # Configuration:
-#   LIST_OF_ENV_VARS_TO_SET
+#   53CAL_JP_CITY, 53CAL_JP_AREA
+#     see: http://www.53cal.jp/area_sv/
 #
 # Commands:
-#   hubot hello - <what the respond trigger does>
-#   orly - <what the hear trigger does>
-#
-# Notes:
-#   <optional notes required for the script>
+#   hubot ゴミ 今日 - your scheduled collection day today
+#   hubot ゴミ 明日 - your scheduled collection day tomorrow
 #
 # Author:
-#   sanemat[@<org>]
+#   sanemat
 gomiCalJp = require '53cal-jp-scraper'
 moment = require 'moment'
 scraper = gomiCalJp({ city: '1130104', area: '1130104154' })
