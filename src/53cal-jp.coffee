@@ -24,3 +24,10 @@ module.exports = (robot) ->
     scraper.whatDate dayString, (err, data) ->
       gomi = if data.result[dayString] then data.result[dayString] + 'です。' else 'ゴミの収集がありません。'
       msg.reply day.format('YYYY-MM-DD dddd') + ' ' + 'の[' + data.meta.areaName + ']は' + gomi
+
+  robot.respond /ゴミ 今日/, (msg) ->
+    day = moment()
+    dayString = day.format('YYYY-MM-DD')
+    scraper.whatDate dayString, (err, data) ->
+      gomi = if data.result[dayString] then data.result[dayString] + 'です。' else 'ゴミの収集がありません。'
+      msg.reply day.format('YYYY-MM-DD dddd') + ' ' + 'の[' + data.meta.areaName + ']は' + gomi
