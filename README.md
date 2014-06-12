@@ -24,6 +24,11 @@ heroku config:set GOMICAL_JP_CITY=1130104 GOMICAL_JP_AREA=1130104154
 ```
   You can get city and area from [here](http://www.53cal.jp/area_sv/)
 
+  You set `GOMICAL_JP_CRON_JOB`, `GOMICAL_JP_CRON_ROOM` like below:
+```
+heroku config:set GOMICAL_JP_CRON_JOB="0 0 19 * * *" GOMICAL_JP_CRON_ROOM="#general"
+```
+
 ## Sample Interaction
 
 ```
