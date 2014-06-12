@@ -12,8 +12,5 @@ describe '53cal-jp', ->
 
     require('../src/53cal-jp')(@robot)
 
-  it 'registers a respond listener today', ->
-    expect(@robot.respond).to.have.been.calledWith(/ゴミ 今日/)
-
-  it 'registers a respond listener tomorrow', ->
-    expect(@robot.respond).to.have.been.calledWith(/ゴミ 明日/)
+  it 'registers a respond listener', ->
+    expect(@robot.respond).to.have.been.calledWith(/ゴミ\s+(明日|今日)/)
