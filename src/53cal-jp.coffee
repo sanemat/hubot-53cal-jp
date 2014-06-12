@@ -8,6 +8,8 @@
 # Configuration:
 #   GOMICAL_JP_CITY, GOMICAL_JP_AREA
 #     see: http://www.53cal.jp/area_sv/
+#   GOMICAL_JP_CRON_JOB, GOMICAL_JP_CRON_ROOM
+#     *(sec) *(min) *(hour) *(day) *(month) *(day of the week)
 #
 # Commands:
 #   hubot ゴミ 今日 - your scheduled collection day today
