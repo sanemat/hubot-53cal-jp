@@ -37,7 +37,6 @@ module.exports = (robot) ->
       gomi = if data.result[dayString] then data.result[dayString] + 'です。' else 'ゴミの収集がありません。'
       msg.reply sprintf('%s %s の[%s]は%s', msg.match[1], day.format('YYYY-MM-DD dddd'), data.meta.areaName, gomi)
 
-module.exports = (robot) ->
   if cronTime && cronRoom
     new cronJob(cronTime, () ->
       day = moment().add('days', 1)
