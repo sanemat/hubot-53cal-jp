@@ -34,6 +34,7 @@ heroku config:set GOMICAL_JP_CRON_JOB="0 0 19 * * *" GOMICAL_JP_CRON_ROOM="#gene
 ```
 user1>> hubot ゴミ 今日
 hubot>> 2014-06-10 Tuesday の[南大井6丁目18番地(大森住宅）以外]は燃やすごみです。
+hubot>> http://www.53cal.jp/areacalendar/?city=1130104&area=1130104154&yy=2014&mm=6
 ```
 
 [npm-url]: https://npmjs.org/package/hubot-53cal-jp
