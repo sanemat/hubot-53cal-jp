@@ -38,6 +38,7 @@ module.exports = (robot) ->
     scraper.whatDate dayString, (err, data) ->
       gomi = if data.result[dayString] then data.result[dayString] + 'です。' else 'ゴミの収集がありません。'
       msg.reply sprintf('%s %s の[%s]は%s', msg.match[1], day.format('YYYY-MM-DD dddd'), data.meta.areaName, gomi)
+      msg.reply data.meta.link
 
   if cronTime && cronRoom
     new cronJob(cronTime, () ->
@@ -45,5 +46,6 @@ module.exports = (robot) ->
       dayString = day.format('YYYY-MM-DD')
       scraper.whatDate dayString, (err, data) ->
         gomi = if data.result[dayString] then data.result[dayString] + 'です。' else 'ゴミの収集がありません。'
-        robot.send {room: cronRoom}, sprintf('%s %s の[%s]は%s', '明日', day.format('YYYY-MM-DD dddd'), data.meta.areaName, gomi)
+        robot.messageRoom cronRoom, sprintf('%s %s の[%s]は%s', '明日', day.format('YYYY-MM-DD dddd'), data.meta.areaName, gomi)
+        robot.messageRoom cronRoom, data.meta.link
     ).start()
